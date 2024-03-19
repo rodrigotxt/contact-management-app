@@ -23,7 +23,7 @@
       <td align="right">
         <a href="contacts/{{ $contact->id }}" class="btn btn-outline-primary"><i class="fa fa-address-card"></i>  View</a>
         <a href="contacts/{{ $contact->id }}/edit" class="btn btn-outline-secondary"><i class="fa fa-edit"></i> Edit</a>
-        <a onclick="return confirmRemove({{ $contact->id }})" href="contacts/remove/{{ $contact->id }}" class="btn btn-outline-danger"><i class="fa fa-close"></i> Remove</a>
+        <button onclick="return confirmRemove({{ $contact->id }})" class="btn btn-outline-danger"><i class="fa fa-close"></i> Remove</button>
        </td>
     </tr>
     @endforeach
@@ -34,8 +34,27 @@
     </p>
 </div>
 <script>
-    function confirmRemove(id){
-        return confirm('Deseja realmente excluir o contato?');
+    function confirmRemove(contactId){
+      console.log('remove contact ' + contactId);
+      if(confirm('I really want to delete the contact?')){
+          fetch(`/contacts/${contactId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('The contact has been removed.');
+                        window.location.reload();
+                    } else {
+                        alert('An error occurred while removing the contact.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
     }
 </script>
 @endsection
