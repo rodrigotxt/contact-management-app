@@ -8,7 +8,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Contact extends Model
 {
-    public $timestamps = false;
+    
     use HasFactory;
     use SoftDeletes;
+    
+    public $timestamps = false;
+    protected $guarded = ['id'];
+
+    protected $fillable = ['name', 'contact', 'email'];
+    
 }
