@@ -1,0 +1,7 @@
+172.25.0.1 - - [19/Mar/2024:16:05:55 +0000] "GET / HTTP/1.1" 403 493 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0"
+172.25.0.1 - - [19/Mar/2024:16:08:34 +0000] "GET / HTTP/1.1" 403 493 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0"
+172.25.0.1 - - [19/Mar/2024:16:08:34 +0000] "GET /favicon.ico HTTP/1.1" 404 489 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0"
+172.25.0.1 - - [19/Mar/2024:16:09:21 +0000] "GET / HTTP/1.1" 200 536 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0"
+172.25.0.1 - - [19/Mar/2024:16:09:21 +0000] "GET /favicon.ico HTTP/1.1" 200 295 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0"
+172.28.0.1 - - [19/Mar/2024:16:13:07 +0000] "GET / HTTP/1.1" 200 536 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0"
+172.28.0.1 - - [19/Mar/2024:16:14:41 +0000] "GET / HTTP/1.1" 200 536 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:124.0) Gecko/20100101 Firefox/124.0"
