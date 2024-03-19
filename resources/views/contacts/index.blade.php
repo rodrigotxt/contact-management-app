@@ -33,28 +33,4 @@
         <a href="contacts/create" class="btn btn-success"><i class="fa fa-plus"></i> New Contact</a>
     </p>
 </div>
-<script>
-    function confirmRemove(contactId){
-      console.log('remove contact ' + contactId);
-      if(confirm('I really want to delete the contact?')){
-          fetch(`/contacts/${contactId}`, {
-                    method: 'DELETE',
-                    headers: {
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        alert('The contact has been removed.');
-                        window.location.reload();
-                    } else {
-                        alert('An error occurred while removing the contact.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        }
-    }
-</script>
 @endsection

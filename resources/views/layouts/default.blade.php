@@ -9,5 +9,31 @@
         <div class="container">
             @yield('content')
         </div>
+
+
+<script>
+function confirmRemove(contactId){
+    console.log('remove contact ' + contactId);
+    if(confirm('I really want to delete the contact?')){
+        fetch(`/contacts/${contactId}`, {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('The contact has been removed.');
+                    window.location.replace('/contacts');
+                } else {
+                    alert('An error occurred while removing the contact.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+}
+</script>
     </body>
 </html>
