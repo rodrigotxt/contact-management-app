@@ -2,7 +2,7 @@
 
 @section('content')
 <div>
-    <h1>Contacts</h1>
+    <h1 class="py-3">Contacts Index (List)</h1>
     <table class="table table-striped table-hover">
   <thead class="table-dark">
     <tr>
