@@ -30,8 +30,7 @@ class ContactController extends Controller
 
     public function destroy($id)
     {
-        \App\Models\Contact::destroy($id);
-        return redirect('/contacts');
+        return \App\Models\Contact::destroy($id);
     }
     public function create()
     {
