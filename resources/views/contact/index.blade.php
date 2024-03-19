@@ -29,6 +29,9 @@
     @endforeach
   </tbody>
     </table>
+    <p>
+        <a href="contact/create" class="btn btn-success"><i class="fa fa-plus"></i> Novo Contato</a>
+    </p>
 </div>
 <script>
     function confirmRemove(id){
