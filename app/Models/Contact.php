@@ -16,5 +16,9 @@ class Contact extends Model
     protected $guarded = ['id'];
 
     protected $fillable = ['name', 'contact', 'email'];
+
+    public function update($attributes = [], $options = []){
+        return parent::update($attributes, $options);
+    }
     
 }

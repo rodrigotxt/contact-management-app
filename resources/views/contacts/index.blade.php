@@ -22,7 +22,7 @@
       <td>{{ $contact->email }}</td>
       <td align="right">
         <a href="contacts/{{ $contact->id }}" class="btn btn-outline-primary"><i class="fa fa-address-card"></i>  View</a>
-        <a href="contacts/edit/{{ $contact->id }}" class="btn btn-outline-secondary"><i class="fa fa-edit"></i> Edit</a>
+        <a href="contacts/{{ $contact->id }}/edit" class="btn btn-outline-secondary"><i class="fa fa-edit"></i> Edit</a>
         <a onclick="return confirmRemove({{ $contact->id }})" href="contacts/remove/{{ $contact->id }}" class="btn btn-outline-danger"><i class="fa fa-close"></i> Remove</a>
        </td>
     </tr>
