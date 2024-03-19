@@ -15,8 +15,8 @@
         <input class="form-control" type="email" id="contact_email" name="email" required>
 
         <div class="py-3">
-            <button class="btn btn-primary mr-5" type="submit">Enviar</button>
-            <a href="{{ route('contacts.index') }}" class="btn btn-outline-secondary ml-3">Cancelar</a>
+            <button class="btn btn-primary mr-5" type="submit">Save</button>
+            <a href="{{ route('contacts.index') }}" class="btn btn-outline-secondary ml-3">Cancel</a>
         </div>
 
     </form>

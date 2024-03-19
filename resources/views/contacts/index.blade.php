@@ -21,16 +21,16 @@
       <td>{{ $contact->contact }}</td>
       <td>{{ $contact->email }}</td>
       <td align="right">
-        <a href="contacts/{{ $contact->id }}" class="btn btn-outline-primary"><i class="fa fa-address-card"></i>  Ver</a>
-        <a href="contacts/edit/{{ $contact->id }}" class="btn btn-outline-secondary"><i class="fa fa-edit"></i> Editar</a>
-        <a onclick="return confirmRemove({{ $contact->id }})" href="contacts/remove/{{ $contact->id }}" class="btn btn-outline-danger"><i class="fa fa-close"></i> Excluir</a>
+        <a href="contacts/{{ $contact->id }}" class="btn btn-outline-primary"><i class="fa fa-address-card"></i>  View</a>
+        <a href="contacts/edit/{{ $contact->id }}" class="btn btn-outline-secondary"><i class="fa fa-edit"></i> Edit</a>
+        <a onclick="return confirmRemove({{ $contact->id }})" href="contacts/remove/{{ $contact->id }}" class="btn btn-outline-danger"><i class="fa fa-close"></i> Remove</a>
        </td>
     </tr>
     @endforeach
   </tbody>
     </table>
     <p>
-        <a href="contacts/create" class="btn btn-success"><i class="fa fa-plus"></i> Novo Contato</a>
+        <a href="contacts/create" class="btn btn-success"><i class="fa fa-plus"></i> New Contact</a>
     </p>
 </div>
 <script>
