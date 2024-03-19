@@ -44,7 +44,7 @@ class ContactController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|min:6|max:255',
             'email' => 'required|email',
-            'contact' => 'required|numeric|length:9',
+            'contact' => 'required|numeric|digits:9',
         ]);
 
         if ($validator->fails()) {
