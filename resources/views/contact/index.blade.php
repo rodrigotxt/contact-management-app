@@ -20,7 +20,7 @@
       <td>{{ $contact->name }}</td>
       <td>{{ $contact->contact }}</td>
       <td>{{ $contact->email }}</td>
-      <td>
+      <td align="right">
         <a href="contact/show?id={{ $contact->id }}" class="btn btn-outline-primary"><i class="fa fa-address-card"></i>  Ver</a>
         <a href="contact/edit?id={{ $contact->id }}" class="btn btn-outline-secondary"><i class="fa fa-edit"></i> Editar</a>
         <a onclick="return confirmRemove({{ $contact->id }})" href="contact/remove?id={{ $contact->id }}" class="btn btn-outline-danger"><i class="fa fa-close"></i> Excluir</a>
