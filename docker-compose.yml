@@ -5,6 +5,8 @@ services:
         restart: always
         ports:
             - "8080:80"
+        links:
+            - mysql
         volumes:
             - ./:/var/www/html
             - ./log:/var/log/apache2
@@ -15,10 +17,10 @@ services:
             - "33065:3306"
         command: --default-authentication-plugin=mysql_native_password
         environment:
-            - MYSQL_DATABASE=recruitment
-            - MYSQL_USER=rodrigomartins-lv
-            - MYSQL_PASSWORD=sYxcOQBKgBFPwfn
-            - MYSQL_ROOT_PASSWORD=rootpassword
+            MYSQL_DATABASE: recruitment
+            MYSQL_USER: rodrigomartins-lv
+            MYSQL_PASSWORD: sYxcOQBKgBFPwfn
+            MYSQL_ROOT_PASSWORD: rootpassword
         volumes:
             - ./dump:/docker-entrypoint-initdb.d
             - ./conf:/etc/mysql/conf.d
