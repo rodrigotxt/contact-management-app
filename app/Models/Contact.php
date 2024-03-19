@@ -20,5 +20,8 @@ class Contact extends Model
     public function update($attributes = [], $options = []){
         return parent::update($attributes, $options);
     }
+    public static function create($attributes = [], $options = []){
+        return parent::create($attributes, $options);
+    }
     
 }
