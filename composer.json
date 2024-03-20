@@ -37,6 +37,7 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
             "@php artisan storage:link",
+            "@php artisan key:generate --ansi",
             "@chmod o+w ./storage -R"
         ],
         "post-update-cmd": [
