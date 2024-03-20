@@ -31,7 +31,7 @@
                             <label for="contact" class="col-md-4 control-label">Contact</label>
 
                             <div class="col">
-                                <input id="contact" type="int" class="form-control" name="contact" value="{{ $contact->contact }}" required autofocus>
+                                <input id="contact" onkeyup="this.value=this.value.replace(/[^\d]/,'')" maxlength="9" minlength="9" type="text" class="form-control" name="contact" value="{{ $contact->contact }}" required autofocus>
 
                                 @if ($errors->has('contact'))
                                     <span class="help-block">
