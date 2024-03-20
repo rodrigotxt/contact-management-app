@@ -14,7 +14,7 @@
 <script>
 function confirmRemove(contactId){
     console.log('remove contact ' + contactId);
-    if(confirm('I really want to delete the contact?')){
+    if(confirm('Do you really want to delete the contact?')){
         fetch(`/contacts/${contactId}`, {
                 method: 'DELETE',
                 headers: {
