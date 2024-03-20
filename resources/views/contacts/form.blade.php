@@ -7,7 +7,7 @@
 
     <div class="form-group">
         <label for="contact">Contact:</label>
-        <input class="form-control" type="text" id="contact" name="contact" required>
+        <input class="form-control" type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')" maxlength="9" minlength="9" id="contact" name="contact" required>
     </div>
 
     <div class="form-group">
