@@ -25,6 +25,19 @@ class ContactController extends Controller
 
     public function update($id, Request $request)
     {
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|min:6|max:255',
+            'email' => 'required|email',
+            'contact' => 'required|numeric|digits:9',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/contacts/' . $id . '/edit/')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
         $contact = Contact::find($id);
         $contact->update($request->all());
         return redirect('/contacts/' . $id);
